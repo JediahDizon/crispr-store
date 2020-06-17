@@ -1,2 +1,2 @@
-# crispr-store
+# CRISPR Store
 See the better you.
