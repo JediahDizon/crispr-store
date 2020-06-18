@@ -1,0 +1,21 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-between">
+
+	<ly-card maxWidth="300" *ngFor="let product of productList">
+		<ly-card-media [bgImg]="product.image"></ly-card-media>
+		<ly-card-content>
+			<h2 gutterBottom>{{ product.name }}</h2>
+			<p>{{ product.description }}</p>
+		</ly-card-content>
+
+		<ly-card-actions fxLayout="row wrap" fxLayoutAlign="start">
+			<button ly-button bg="Crispr">
+				<span style="margin-right: 10px;">Add to Cart</span>
+				<ly-icon>add</ly-icon>
+			</button>
+			<button ly-button>
+				<ly-icon>share</ly-icon>
+			</button>
+		</ly-card-actions>
+	</ly-card>
+
+</div>

@@ -15,6 +15,8 @@
   background: rgba(255, 255, 255, 0.5)
 }
 
+/* Alyle Overrides */
+
 /* Native UI Overrides */
 html * {
 	/* color: white !important; */
@@ -36,11 +38,17 @@ body p {
 	margin-top: 0;
 }
 
-
-/* Browser UI Overrides */
 a:focus,
 button:focus,
 input:focus,
 textarea:focus {
 	outline: none;
+}
+
+.input {
+	width: 100%;
+	height: 50px;
+	padding: 20px;
+	border: none;
+	border-radius: 5px;
 }

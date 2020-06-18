@@ -1,6 +1,10 @@
+#container {
+	background-color: white;
+}
 #banner {
 	width: 100%;
-	overflow: none;
+	height: 333px;
+	overflow: hidden;
 }
 
 #banner > img {

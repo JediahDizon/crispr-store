@@ -1,0 +1,8 @@
+ly-card ly-card-actions {
+	opacity: 0;
+	transition: opacity 0.05s ease-in-out;
+}
+
+ly-card:hover ly-card-actions {
+	opacity: 1;
+}
