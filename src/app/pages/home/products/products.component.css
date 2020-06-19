@@ -1,6 +1,17 @@
+ly-card {
+	margin-bottom: 20px;
+	cursor: pointer;
+	filter: brightness(1);
+	transition: filter .05s ease-in-out;
+}
+
 ly-card ly-card-actions {
 	opacity: 0;
 	transition: opacity 0.05s ease-in-out;
+}
+
+ly-card:hover {
+	filter: brightness(1.1);
 }
 
 ly-card:hover ly-card-actions {

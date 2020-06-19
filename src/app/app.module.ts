@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HAMMER_GESTURE_CONFIG, HammerModule } from '@angular/platform-browser';
-import { PartialThemeVariables, lyl, LyTheme2, StyleRenderer, LY_THEME, LY_THEME_NAME, LY_THEME_GLOBAL_VARIABLES, LyHammerGestureConfig } from '@alyle/ui';
+import { lyl, LyTheme2, StyleRenderer, LY_THEME, LY_THEME_NAME, LY_THEME_GLOBAL_VARIABLES, LyHammerGestureConfig } from '@alyle/ui';
 
 // Alyle Components
 import { LyButtonModule } from '@alyle/ui/button';
@@ -15,11 +15,15 @@ import { LyCardModule } from '@alyle/ui/card';
 import { MinimaLight, MinimaDark } from '@alyle/ui/themes/minima';
 import { color } from '@alyle/ui/color';
 
+// Material Components
+import { MatDialogModule } from '@angular/material/dialog';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/home/products/products.component';
+import { ProductDialogComponent } from './pages/home/products/product-dialog/product-dialog.component';
 
 // Alyle Override Styles - Might need to be in a separate file
 
@@ -48,21 +52,27 @@ export class GlobalVariables {
 		AppComponent,
 		AboutComponent,
 		HomeComponent,
-		ProductsComponent
+		ProductsComponent,
+		ProductDialogComponent
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
 		HttpClientModule,
 
-		// UI Components
+		// UI Modules
 		FlexLayoutModule,
 		BrowserAnimationsModule,
+
+		// Alyle Modules
 		LyCardModule,
 		LyButtonModule,
 		LyFieldModule,
 		LyIconModule,
-		HammerModule
+		HammerModule,
+
+		// Material Modules
+		MatDialogModule
 	],
 	providers: [
 		[ LyTheme2 ],

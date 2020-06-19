@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ProductDialogComponent } from "./product-dialog/product-dialog.component";
 import * as _ from 'lodash';
 
 @Component({
@@ -118,10 +120,21 @@ export class ProductsComponent implements OnInit {
 		},
 	];
 
-	constructor() {
+	constructor(public dialog: MatDialog) {}
+
+	ngOnInit(): void {}
+
+	onSelect(productId): void {
+		const dialogRef = this.dialog.open(ProductDialogComponent, {
+			data: _.find(this.productList, { id: productId })
+		});
+
+		dialogRef.afterClosed().subscribe(result => {
+			console.log('The dialog was closed');
+		});
 	}
 
-	ngOnInit(): void {
-	}
+	onCart(productId) {
 
+	}
 }

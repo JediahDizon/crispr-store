@@ -1,6 +1,6 @@
 <div fxLayout="row wrap" fxLayoutAlign="space-between">
 
-	<ly-card maxWidth="300" *ngFor="let product of productList">
+	<ly-card maxWidth="300" *ngFor="let product of productList" (click)="onSelect(product.id)">
 		<ly-card-media [bgImg]="product.image"></ly-card-media>
 		<ly-card-content>
 			<h2 gutterBottom>{{ product.name }}</h2>
@@ -8,11 +8,11 @@
 		</ly-card-content>
 
 		<ly-card-actions fxLayout="row wrap" fxLayoutAlign="start">
-			<button ly-button bg="Crispr">
+			<button ly-button bg="Crispr" (click)="onCart(product.id); $event.stopPropagation();">
 				<span style="margin-right: 10px;">Add to Cart</span>
 				<ly-icon>add</ly-icon>
 			</button>
-			<button ly-button>
+			<button ly-button (click)="$event.stopPropagation();">
 				<ly-icon>share</ly-icon>
 			</button>
 		</ly-card-actions>
