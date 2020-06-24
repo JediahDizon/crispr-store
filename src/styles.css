@@ -1,21 +1,43 @@
+/* Angular Imports */
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons';
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap';
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
 /* width */
 ::-webkit-scrollbar {
 	width: 10px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  opacity: 0;
+	opacity: 0;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
+	background: #ffb812;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5)
+	background: linear-gradient(135deg, #ffb812 0%, #ff9812 100%);
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+body {
+	-ms-overflow-style: none;
 }
 
 /* Alyle Overrides */
+/* Refer to `home.component.ts` to override Alyle styles */
+
+/* Angular Material Overrides */
+/* Due to Material's CSS injection, we cannot override the styles in this file without using `!important` */
+.mat-dialog-container {
+	box-shadow: none!important;
+	border-radius: 0!important; 
+}
 
 /* Native UI Overrides */
 html * {

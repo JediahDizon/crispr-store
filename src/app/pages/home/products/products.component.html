@@ -1,10 +1,10 @@
 <div fxLayout="row wrap" fxLayoutAlign="space-between">
 
-	<ly-card maxWidth="300" *ngFor="let product of productList" (click)="onSelect(product.id)">
+	<ly-card maxWidth="300px" *ngFor="let product of productList" (click)="onSelect(product.id)">
 		<ly-card-media [bgImg]="product.image"></ly-card-media>
 		<ly-card-content>
 			<h2 gutterBottom>{{ product.name }}</h2>
-			<p>{{ product.description }}</p>
+			<p class="product-description">{{ product.description }}</p>
 		</ly-card-content>
 
 		<ly-card-actions fxLayout="row wrap" fxLayoutAlign="start">

@@ -1,13 +1,14 @@
 <h2 mat-dialog-title>{{ this.data.name }}</h2>
 <mat-dialog-content>
-	<div fxLayout="column" fxLayoutAlign="center">
-		<img [src]="this.data.image" />
-		<p>
-			{{
-				this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description +
-				this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description + this.data.description
-			}}
-		</p>
+	<div fxLayout="row" fxLayoutGap="20px">
+		<div fxLayout="column" fxFlex="50">
+			<img [src]="this.data.image" class="product-image" />
+			<img [src]="this.data.image" class="product-image" />
+			<img [src]="this.data.image" class="product-image" />
+		</div>
+		<div fxFlex="50" class="product-description-container">
+			<p>{{ this.data.description }}</p>
+		</div>
 	</div>
 </mat-dialog-content>
 

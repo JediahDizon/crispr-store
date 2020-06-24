@@ -5,3 +5,12 @@
 mat-dialog-actions {
 	padding: 20px 0 20px 0;
 }
+
+/* We control the height of the image so any image uploaded won't cause problems when it has faulty dimensions */
+.product-image {
+	/* max-height: 100px; */
+}
+
+.product-dialog {
+	background-color: red;
+}

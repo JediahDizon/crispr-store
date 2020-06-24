@@ -1,9 +1,13 @@
 <div id="container">
 
 	<!-- BANNER -->
-	<div id="banner">
-		<img src="https://steelcase-res.cloudinary.com/image/upload/c_fill,dpr_auto,q_70,h_656,w_1166/v1557252758/AO_plastic_EMEA_1000.jpg" />
-	</div>
+	<ly-carousel id="banner" touch hasProgressBar pauseOnHover>
+		<ly-carousel-item
+			*ngFor="let product of productList"
+			[srcImg]="product.image"
+		>
+		</ly-carousel-item>
+	</ly-carousel>
 
 	<!-- CONTENT -->
 	<div id="content">

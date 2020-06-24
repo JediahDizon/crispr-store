@@ -14,10 +14,13 @@ import { LyIconModule } from '@alyle/ui/icon';
 import { LyCardModule } from '@alyle/ui/card';
 import { MinimaLight, MinimaDark } from '@alyle/ui/themes/minima';
 import { color } from '@alyle/ui/color';
+import { LyCarouselModule } from '@alyle/ui/carousel';
 
 // Material Components
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 
+// Pages
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -70,9 +73,11 @@ export class GlobalVariables {
 		LyFieldModule,
 		LyIconModule,
 		HammerModule,
+		LyCarouselModule,
 
 		// Material Modules
-		MatDialogModule
+		MatDialogModule,
+		MatCardModule
 	],
 	providers: [
 		[ LyTheme2 ],
