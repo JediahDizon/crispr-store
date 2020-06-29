@@ -36,7 +36,7 @@ body {
 /* Due to Material's CSS injection, we cannot override the styles in this file without using `!important` */
 .mat-dialog-container {
 	box-shadow: none!important;
-	border-radius: 0!important; 
+	border-radius: 0!important;
 }
 
 /* Native UI Overrides */

@@ -22,5 +22,5 @@
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
     "types": ["node"]
-  }
+	}
 }

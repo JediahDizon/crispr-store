@@ -1,5 +1,5 @@
-.container {
-	overflow-y: auto;
+#container {
+	height: 80vh;
 }
 
 mat-dialog-actions {

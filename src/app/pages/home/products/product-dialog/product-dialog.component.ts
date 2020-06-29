@@ -1,5 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Component, ViewChild, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatAccordion } from '@angular/material/expansion';
 
 @Component({
 	selector: 'app-product-dialog',
@@ -7,7 +8,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 	styleUrls: ['./product-dialog.component.css']
 })
 export class ProductDialogComponent {
-
+	@ViewChild(MatAccordion) accordion: MatAccordion;
 	constructor(
 		public dialogRef: MatDialogRef<ProductDialogComponent>,
 		@Inject(MAT_DIALOG_DATA) public data) { }

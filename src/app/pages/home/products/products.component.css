@@ -18,6 +18,10 @@ ly-card:hover ly-card-actions {
 	opacity: 1;
 }
 
+ly-card ly-card-content {
+	padding-right: 0;
+}
+
 .product-description {
 	max-height: 200px;
 	overflow-y: auto;

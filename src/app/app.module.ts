@@ -19,6 +19,7 @@ import { LyCarouselModule } from '@alyle/ui/carousel';
 // Material Components
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 // Pages
 import { AppRoutingModule } from './app-routing.module';
@@ -77,7 +78,8 @@ export class GlobalVariables {
 
 		// Material Modules
 		MatDialogModule,
-		MatCardModule
+		MatCardModule,
+		MatExpansionModule
 	],
 	providers: [
 		[ LyTheme2 ],

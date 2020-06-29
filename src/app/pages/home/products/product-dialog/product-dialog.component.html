@@ -1,24 +1,45 @@
-<h2 mat-dialog-title>{{ this.data.name }}</h2>
-<mat-dialog-content>
-	<div fxLayout="row" fxLayoutGap="20px">
-		<div fxLayout="column" fxFlex="50">
-			<img [src]="this.data.image" class="product-image" />
-			<img [src]="this.data.image" class="product-image" />
-			<img [src]="this.data.image" class="product-image" />
-		</div>
-		<div fxFlex="50" class="product-description-container">
-			<p>{{ this.data.description }}</p>
-		</div>
-	</div>
-</mat-dialog-content>
+<div id="container">
+	<mat-dialog-content>
+		<div fxLayout="row" fxLayoutGap="20px">
+			<div fxLayout="column" fxFlex="33" fxLayoutGap="20px">
 
-<mat-dialog-actions fxLayout="row wrap" fxLayoutAlign="end">
-	<button ly-button bg="Crispr" style="margin-right: 10px;">
-		<span style="margin-right: 10px;">Add to Cart</span>
-		<ly-icon>add</ly-icon>
-	</button>
+				<ly-carousel style="height:333px" touch>
+					<ly-carousel-item [srcImg]="this.data.image">
+					</ly-carousel-item>
+				</ly-carousel>
+			</div>
 
-	<button ly-button>
-		<ly-icon>share</ly-icon>
-	</button>
-</mat-dialog-actions>
+			<div fxLayout="column" fxLayoutGap="20px" fxFlex="77"class="product-description-container">
+				<div>
+					<h3>{{ this.data.name }}</h3>
+					<h1><small>$ </small>{{ this.data.price[this.data.price.type] }}</h1>
+					<p>{{ this.data.description }}</p>
+				</div>
+
+				<mat-accordion disabled>
+					<mat-expansion-panel class="mat-elevation-z0">
+						<mat-expansion-panel-header>
+							<mat-panel-title>Reviews</mat-panel-title>
+							<mat-panel-description>
+								Reviews feature coming soon!
+							</mat-panel-description>
+						</mat-expansion-panel-header>
+
+						<p>Reviews feature coming soon!</p>
+					</mat-expansion-panel>
+				</mat-accordion>
+			</div>
+		</div>
+	</mat-dialog-content>
+
+	<mat-dialog-actions fxLayout="row wrap" fxLayoutAlign="end">
+		<button ly-button bg="Crispr" style="margin-right: 10px;">
+			<span style="margin-right: 10px;">Add to Cart</span>
+			<ly-icon>add</ly-icon>
+		</button>
+
+		<button ly-button>
+			<ly-icon>share</ly-icon>
+		</button>
+	</mat-dialog-actions>
+</div>
