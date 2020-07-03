@@ -37,7 +37,6 @@
 				color: white
 			}
 			:first-child :last-child {
-				background: none
 				div {
 					background: white
 				}
