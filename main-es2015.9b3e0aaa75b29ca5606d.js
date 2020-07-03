@@ -25,18 +25,21 @@
 			}
 			
 		}`},this.carousel={root:()=>uy`{
-			span[class^="indicatorIcon"] {
+			li > span {
 				box-shadow: none
 			}
-			div[class^="actions"] {
+			.right {
 				background: none	
 				color: white
 			}
-
+			.left {
+				background: none	
+				color: white
+			}
 			div[class^="barContainer"] {
 				background: none
 				div[class^="bar"] {
 					background: white
-				}	
+				}
 			}
 		}`}}}let TE=(()=>{class t{}return t.\u0275mod=_e({type:t,bootstrap:[EE]}),t.\u0275inj=dt({factory:function(e){return new(e||t)},providers:[[Ay],[l_],{provide:ey,useValue:"minima-light"},{provide:ty,useClass:Bv,multi:!0},{provide:ty,useClass:Uv,multi:!0},{provide:Jg,useClass:kE},{provide:Nc,useClass:tv}],imports:[[Kc,SE,Rh,Wp,yg,Ov,cv,gv,Sv,jc,ub,Ew,kw,Xw]]}),t})();!function(){if(vi)throw new Error("Cannot enable prod mode after platform setup.");_i=!1}(),Gc().bootstrapModule(TE).catch(t=>console.log(t))},zn8P:function(t,e){function n(t){return Promise.resolve().then((function(){var e=new Error("Cannot find module '"+t+"'");throw e.code="MODULE_NOT_FOUND",e}))}n.keys=function(){return[]},n.resolve=n,t.exports=n,n.id="zn8P"}},[[0,0]]]);
