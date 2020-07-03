@@ -36,9 +36,9 @@
 				background: none	
 				color: white
 			}
-			div[class^="barContainer"] {
+			:first-child :last-child {
 				background: none
-				div[class^="bar"] {
+				div {
 					background: white
 				}
 			}
