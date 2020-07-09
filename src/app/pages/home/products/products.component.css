@@ -1,8 +1,8 @@
 ly-card {
 	margin-bottom: 20px;
-	cursor: pointer;
 	filter: brightness(1);
 	transition: filter .05s ease-in-out;
+	cursor: pointer;
 }
 
 ly-card ly-card-actions {
@@ -19,10 +19,18 @@ ly-card:hover ly-card-actions {
 }
 
 ly-card ly-card-content {
-	padding-right: 0;
+	overflow-y: auto;
+	padding: 20px 0 0 0;
+	margin-bottom: 15px;
+}
+
+ly-card ly-card-content p {
+	white-space: nowrap;
+	overflow: hidden;
+  	width:auto;
+	text-overflow: ellipsis;
 }
 
 .product-description {
 	max-height: 200px;
-	overflow-y: auto;
 }

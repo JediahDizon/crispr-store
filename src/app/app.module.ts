@@ -19,7 +19,7 @@ import { LyCarouselModule } from '@alyle/ui/carousel';
 // Material Components
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
-import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTabsModule } from '@angular/material/tabs';
 
 // Pages
 import { AppRoutingModule } from './app-routing.module';
@@ -46,7 +46,33 @@ export class GlobalVariables {
 
 	card = {
 		root: () => lyl `{
+			border-radius: 0
 			box-shadow: none !important
+			ly-card-actions {
+				padding: 0
+			}
+			
+		}`
+	};
+
+	carousel = {
+		root: () => lyl `{
+			li > span {
+				box-shadow: none
+			}
+			.right {
+				background: none	
+				color: white
+			}
+			.left {
+				background: none	
+				color: white
+			}
+			:first-child :last-child {
+				div {
+					background: white
+				}
+			}
 		}`
 	};
 }
@@ -79,7 +105,7 @@ export class GlobalVariables {
 		// Material Modules
 		MatDialogModule,
 		MatCardModule,
-		MatExpansionModule
+		MatTabsModule
 	],
 	providers: [
 		[ LyTheme2 ],

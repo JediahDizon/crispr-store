@@ -1,0 +1,27 @@
+{
+	"longTermDiscomfort": {
+		"A": "Safe",
+		"B": "Avoidable mild discomfort",
+		"C": "Avoidable discomfort",
+		"D": "Mild discomfort",
+		"E": "Discomfort",
+		"F": "Painful"
+	},
+	"geneticSideEffects": {
+		"X": "No known genetic side-effects",
+		"Y": "Chance to cause offspring defect",
+		"Z": "Cause an offspring defect"
+	},
+	"effectivity": ["Indeterminate", 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100],
+	"methods": {
+		"A": "Intravenous",
+		"B": "Ingestion",
+		"C": "Nasal"
+	},
+	"tags": {
+		"A": ["metabolism", "mental", "physical", "optical"],
+		"B": ["muscle", "hair", "eyes"],
+		"C": ["additive", "subtractive"],
+		"D": ["medical", "recreational"]
+	}
+}

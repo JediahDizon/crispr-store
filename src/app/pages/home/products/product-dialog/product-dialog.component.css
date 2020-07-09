@@ -1,5 +1,6 @@
-#container {
-	height: 80vh;
+#content-container {
+	padding-top: 20px;
+	padding-bottom: 100px; 
 }
 
 mat-dialog-actions {
@@ -13,4 +14,8 @@ mat-dialog-actions {
 
 .product-dialog {
 	background-color: red;
+}
+
+.product-image {
+	width: 100%;
 }

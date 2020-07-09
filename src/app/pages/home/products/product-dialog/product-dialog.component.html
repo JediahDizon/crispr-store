@@ -1,45 +1,39 @@
-<div id="container">
-	<mat-dialog-content>
-		<div fxLayout="row" fxLayoutGap="20px">
-			<div fxLayout="column" fxFlex="33" fxLayoutGap="20px">
-
-				<ly-carousel style="height:333px" touch>
-					<ly-carousel-item [srcImg]="this.data.image">
-					</ly-carousel-item>
-				</ly-carousel>
-			</div>
-
-			<div fxLayout="column" fxLayoutGap="20px" fxFlex="77"class="product-description-container">
-				<div>
-					<h3>{{ this.data.name }}</h3>
-					<h1><small>$ </small>{{ this.data.price[this.data.price.type] }}</h1>
-					<p>{{ this.data.description }}</p>
-				</div>
-
-				<mat-accordion disabled>
-					<mat-expansion-panel class="mat-elevation-z0">
-						<mat-expansion-panel-header>
-							<mat-panel-title>Reviews</mat-panel-title>
-							<mat-panel-description>
-								Reviews feature coming soon!
-							</mat-panel-description>
-						</mat-expansion-panel-header>
-
-						<p>Reviews feature coming soon!</p>
-					</mat-expansion-panel>
-				</mat-accordion>
-			</div>
+<mat-dialog-content>
+	<div fxLayout="row" fxLayoutGap="20px" id="content-container">
+		<div fxLayout="column" fxFlex="33" fxLayoutGap="20px" *ngFor="let chunkedImages of _.chunk(this.data.images, 2)">
+			<img class="product-image" *ngFor="let image of chunkedImages" [src]="image" />
+				
+			<!-- Mobile view -->
+			<!-- <ly-carousel style="height:333px" touch>
+				<ly-carousel-item *ngFor="let image of this.data.images" [srcImg]="image">
+				</ly-carousel-item>
+			</ly-carousel> -->
 		</div>
-	</mat-dialog-content>
 
-	<mat-dialog-actions fxLayout="row wrap" fxLayoutAlign="end">
-		<button ly-button bg="Crispr" style="margin-right: 10px;">
-			<span style="margin-right: 10px;">Add to Cart</span>
-			<ly-icon>add</ly-icon>
-		</button>
+		<div fxLayout="column" fxLayoutGap="20px" fxFlex="33"class="product-description-container">
+			<div>
+				<h3>{{ this.data.name }}</h3>
+				<h1><small>$ </small>{{ this.data.price[this.data.price.type] }}</h1>
+				<p>{{ this.data.description }}</p>
+			</div>
+		
+			<mat-tab-group>
+				<mat-tab label="Classification">
+					CLassification coming soon!
+				</mat-tab>
+				<mat-tab label="Reviews">Reviews feature coming soon!</mat-tab>
+			</mat-tab-group>
+		</div>
+	</div>
+</mat-dialog-content>
 
-		<button ly-button>
-			<ly-icon>share</ly-icon>
-		</button>
-	</mat-dialog-actions>
-</div>
+<mat-dialog-actions fxLayout="row wrap" fxLayoutAlign="end">
+	<button ly-button bg="Crispr" style="margin-right: 10px;">
+		<span style="margin-right: 10px;">Add to Cart</span>
+		<ly-icon>add</ly-icon>
+	</button>
+
+	<button ly-button>
+		<ly-icon>share</ly-icon>
+	</button>
+</mat-dialog-actions>

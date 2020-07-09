@@ -1,5 +1,6 @@
-# CRISPR Store
+# CRISPR Store (Under Contruction)
 See the better you.
+### [Website Link](https://jediahdizon.github.io/crispr-store/)
 
 ---
 ### Made in Angular 9

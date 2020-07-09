@@ -1,8 +1,14 @@
 <div fxLayout="row wrap" fxLayoutAlign="space-between">
+	<ly-card maxWidth="300px" *ngFor="let product of productList">
+		
+		<ly-carousel style="height:333px" touch>
+			<ly-carousel-item *ngFor="let image of product.images" [srcImg]="image" (click)="onSelect(product.id)">
+			</ly-carousel-item>
+		</ly-carousel>
 
-	<ly-card maxWidth="300px" *ngFor="let product of productList" (click)="onSelect(product.id)">
-		<ly-card-media [bgImg]="product.image"></ly-card-media>
-		<ly-card-content>
+		<!-- <ly-card-media [bgImg]="product.image"></ly-card-media> -->
+
+		<ly-card-content (click)="onSelect(product.id)">
 			<h2 gutterBottom>{{ product.name }}</h2>
 			<p class="product-description">{{ product.description }}</p>
 		</ly-card-content>

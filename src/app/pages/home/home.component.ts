@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeVariables, ThemeRef, lyl, StyleRenderer } from '@alyle/ui';
-import { Product } from "src/models/product";
+import Product from "src/models/product";
+import ProductFeature from "src/models/product-feature";
 import * as seed from "src/models/seed.json";
 import * as _ from "lodash";
 
@@ -12,17 +13,6 @@ const STYLES = (theme: ThemeVariables, ref: ThemeRef) => {
 		$global: lyl `{
 			#container {
 				background-color: ${theme.background.primary.default}
-			}
-			.indicatorIcon-l {
-				box-shadow: none
-			}
-			.actions-d {
-				border-radius: 2em
-				background: none
-				color: ${theme.background.primary.default}
-			}
-			.bar-o {
-				background: ${theme.background.primary.default}
 			}
 		}`,
 		root: lyl `{
@@ -41,9 +31,12 @@ const STYLES = (theme: ThemeVariables, ref: ThemeRef) => {
 export class HomeComponent implements OnInit {
 	readonly classes = this.sRenderer.renderSheet(STYLES, true);
 	productList: Array<Product>;
+	featureList: Array<ProductFeature>; 
 
 	constructor(readonly sRenderer: StyleRenderer) {
+		// Populate state with seed data
 		this.productList = _.map(seed.products, data => new Product().deserialize(data));
+		this.featureList = _.map(seed.featuredProducts, data => new ProductFeature().deserialize(data));
 	}
 
 	ngOnInit(): void {
